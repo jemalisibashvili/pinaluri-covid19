@@ -4,7 +4,6 @@
     <BreezeAuthenticatedLayout>
         <template #header>
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
-                Dashboard
             </h2>
         </template>
 
@@ -17,9 +16,14 @@
                         <div class='w-full h-96' id="map"></div>
                         </div>
                         <div class="w-1/2">
-                        {{ country.todayCases }}
-                        {{ country.todayDeaths }}
-                        {{ country.todayRecovered }}
+                      <div class=" border border-gray-600 p-5 justify-between text-center" >
+                         <div class="flex  text-center"> <img src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-covid-19-corona-virus-flatart-icons-lineal-color-flatarticons.png"/><h1 class="text-center">world</h1></div>
+                            <div class="flex "> <div class="w-44 h-14 border border-gray-600">{{ country.todayCases }}</div>
+                            <div  class="w-44 h-14 border border-gray-600">  {{ country.todayDeaths }}</div>
+                            <div  class="w-44 h-14 border border-gray-600">  {{ country.todayRecovered }}</div>
+                            </div>
+
+                      </div>
                             <div class="p-2 rounded shadow">
                                 <h3 class="mt-2 text-xl text-center text-indigo-500">Visited Country</h3>
                                 <div class="flex p-6 bg-white border-b border-gray-200">
